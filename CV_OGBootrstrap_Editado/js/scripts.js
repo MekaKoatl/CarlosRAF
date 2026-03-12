@@ -32,3 +32,18 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+    successMessage.classList.remove('d-none');
+    form.reset();
+    form.classList.remove('was-validated');
+});

@@ -8275,6 +8275,13 @@ textarea.form-control-lg {
   border-radius: 50% !important;
 }
 
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 0 !important;
+  /* Asegúrate de que sea cuadrado para que quede simétrico */
+  aspect-ratio: 1 / 1;
+}
+
 .rounded-pill {
   border-radius: var(--bs-border-radius-pill) !important;
 }
@@ -10976,4 +10983,55 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+/* ── Formulario de Contacto ── */
+.contact-input {
+    font-family: var(--bs-body-font-family);
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    border-bottom: 2px solid #bd5d38;
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 0.65rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-input:focus {
+    border-color: #bd5d38;
+    box-shadow: 0 0 0 0.2rem rgba(189, 93, 56, 0.15);
+    background-color: #fff;
+    outline: none;
+}
+
+.contact-input::placeholder {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.contact-btn {
+    font-family: "Saira Extra Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0;
+    background-color: #bd5d38;
+    border-color: #bd5d38;
+    padding: 0.6rem 1.8rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.contact-btn:hover {
+    background-color: #974a2d;
+    border-color: #974a2d;
+    transform: translateY(-1px);
+}
+
+#contacto label {
+    font-family: "Saira Extra Condensed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    color: #495057;
 }
