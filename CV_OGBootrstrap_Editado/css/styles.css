@@ -2856,7 +2856,7 @@ textarea.form-control-lg {
   --bs-btn-color: #000;
   --bs-btn-bg: #bd5d38;
   --bs-btn-border-color: #bd5d38;
-  --bs-btn-hover-color: #000;
+  --bs-btn-hover-color: #white;
   --bs-btn-hover-bg: #c77556;
   --bs-btn-hover-border-color: #c46d4c;
   --bs-btn-focus-shadow-rgb: 161, 79, 48;
@@ -11023,8 +11023,6 @@ section.resume-section .resume-section-content {
 }
 
 .contact-btn:hover {
-    background-color: #974a2d;
-    border-color: #974a2d;
     transform: translateY(-1px);
 }
 
