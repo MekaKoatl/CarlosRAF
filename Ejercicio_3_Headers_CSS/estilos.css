@@ -1,0 +1,77 @@
+* {
+  font-family: "Iosevka Charon Mono", "Inconsolata", monospace;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+footer {
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
+body:has(header) {
+  display: block;
+  padding: 0;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: green;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15%;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.header_green {
+  background-color: green;
+  color: white;
+}
+
+.header_green nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.header_green nav h1 {
+  margin: 0;
+}
+
+.header_green nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header_green nav ul li a {
+  color: white;
+  text-decoration: none;
+}
