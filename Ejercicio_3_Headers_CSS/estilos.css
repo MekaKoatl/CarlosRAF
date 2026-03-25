@@ -8,7 +8,6 @@ body {
   padding: 0;
 }
 
-/* --- Header base (compartido) --- */
 .header_green,
 .header_blue {
   color: white;
@@ -74,24 +73,121 @@ nav ul {
   color: white;
 }
 
-main {
+.main_3 {
   display: flex;
   gap: 2rem;
-  background-color: plum;
+  background-color: rgb(153, 106, 153);
   padding: 2rem;
+}
+
+.main_4 {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  background-color: rgb(182, 61, 61);
+}
+
+.main_4 > * {
+  padding: 1rem;
+}
+
+.main_4 img {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 45%;
+  position: relative;
+}
+
+.main_5 {
+  text-align: center;
+  background-color: rgb(182, 61, 61);
+}
+
+.main_5_v {
+  text-align: center;
+  background-color: rgb(61, 182, 101);
+}
+
+.main_5 h1 {
+  text-align: center;
+}
+
+.main_5_rows {
+  display: flex;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.main_5_v_rows {
+  display: flex;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.main_5 > * {
+  padding: 1rem;
+}
+
+.main_5_v > * {
+  padding: 1rem;
+}
+
+.main_5_rows > * {
+  padding: 1rem;
+}
+
+.main_5 img {
+ margin: 0 auto;
+  padding: 2rem;
+  width: 45%;
+  height: 15rem;
+  position: relative;
+   object-fit: cover;
+}
+
+.main_5_v img {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 45%;
+  height: 15rem;
+  position: relative;
+   object-fit: cover;
 }
 
 .content {
   flex: 1;
-  color: darkgreen;
+  color: black;
 }
+
+
 
 .sidebar {
   width: 200px;
   flex-shrink: 0;
-  background-color: lightgreen;
+  background-color: rgb(127, 180, 127);
   border-radius: 12px;
   padding: 1rem;
-  color: purple;
+  color: rgb(68, 13, 68);
   text-align: center;
+}
+
+.E5 h1 {
+   padding: 10px 24px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  display:inline-block;
+
+  background-color: white;
+}
+
+.r {
+ 
 }
