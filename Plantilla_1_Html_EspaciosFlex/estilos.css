@@ -28,7 +28,7 @@ img {
   max-width: 100%;
 }
 
-/* ── Header ────────────────────────────────────────────── */
+/* -- Header ---------------------------------------------- */
 .header-sitio {
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
@@ -60,7 +60,6 @@ img {
   text-transform: capitalize;
 }
 
-
 .logo-titulo::first-letter {
   font-size: 28px;
 }
@@ -91,7 +90,6 @@ img {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background 0.2s;
 }
 
 .enlace-nav:hover,
@@ -101,7 +99,7 @@ img {
   color: #fff;
 }
 
-/* ── CITA ─────────────────────────────────────────── */
+/* -- CITA ------------------------------- */
 .seccion-cita {
   max-width: 960px;
   margin: 0 auto;
@@ -120,7 +118,7 @@ img {
   margin: 0 auto;
 }
 
-/* ── HERO ────────────────────────────────────────── */
+/* -- HERO --------------------------- */
 .hero {
   width: 100%;
 }
@@ -131,17 +129,13 @@ img {
   height: 350px;
 
   background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url("https://i.imgflip.com/3drlvv.jpg");
 
   background-size: cover;
   background-position: 5% 35%;
   background-repeat: no-repeat;
 }
-
 
 .hero-img {
   width: 100%;
@@ -156,7 +150,7 @@ img {
   display: block;
 }
 
-/* ── ETIQUETA DE SECCIÓN ─────────────────────────────────── */
+/* -- ETIQUETA DE SECCIÓN ----------------------------- */
 .etiqueta-seccion {
   display: inline-block;
   background: #c00;
@@ -167,7 +161,6 @@ img {
   padding: 4px 14px;
   margin-bottom: 24px;
   text-transform: uppercase;
-  
 }
 
 .etiqueta-seccion.centrada {
@@ -178,7 +171,7 @@ img {
   margin-bottom: 24px;
 }
 
-/* ── SERVICIOS ───────────────────────────────────────────── */
+/* -- SERVICIOS ------------------------------------ */
 
 .seccion-servicios {
   max-width: 960px;
@@ -226,7 +219,7 @@ img {
   color: #c00;
 }
 
-/* ── JUGADORES ───────────────────────────────────────────── */
+/* -- JUGADORES ----------------------------- */
 .seccion-jugadores {
   max-width: 960px;
   margin: 0 auto 30px;
@@ -242,10 +235,7 @@ img {
   padding-bottom: 1em;
 }
 
-/*
-  Cada tarjeta ocupa ~1/5 del ancho (aprox. 175px en 960px)
-  Las fotos son más grandes, similares a la imagen de referencia.
-*/
+
 .tarjeta-jugador {
   flex: 0 0 170px;
   display: flex;
@@ -269,7 +259,6 @@ img {
   background: #ccc;
 }
 
-
 .nombre-jugador {
   font-size: 12px;
   color: #222;
@@ -286,7 +275,7 @@ img {
   color: #c00;
 }
 
-/* ── TRABAJOS ────────────────────────────────────────────── */
+/* -- TRABAJOS ------------------------------ */
 .seccion-trabajos {
   max-width: 960px;
   margin: 0 auto 30px;
@@ -324,7 +313,7 @@ img {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/250px-Original_Doge_meme.jpg");
 }
 
-/* ── PIE DE PÁGINA ───────────────────────────────────────── */
+/* -- PIE DE PÁGINA ------------------------ */
 .pie-pagina {
   background: #e8e8e8;
   color: #555;
@@ -371,7 +360,6 @@ img {
   background-repeat: no-repeat;
 }
 
-/* imágenes individuales */
 .miniatura-1 {
   background-image: url("https://pbs.twimg.com/media/G6zWKdAW8AAFIEg?format=jpg&name=large");
 }
