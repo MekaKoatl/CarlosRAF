@@ -1,0 +1,438 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: #c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Header ────────────────────────────────────────────── */
+.header-sitio {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 20px;
+}
+
+.header-interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+/* Logo? */
+.logotipo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-titulo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+
+.logo-titulo::first-letter {
+  font-size: 28px;
+}
+
+.logo-subtitulo {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+/* Nav */
+.navegacion {
+  display: flex;
+  background: #c00;
+  border-radius: 10px;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.enlace-nav {
+  color: #fff;
+  padding: 0 16px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.enlace-nav:hover,
+.enlace-nav.activo {
+  background: #a00;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ── CITA ─────────────────────────────────────────── */
+.seccion-cita {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.cita-texto {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  font-family: Georgia, serif;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── HERO ────────────────────────────────────────── */
+.hero {
+  width: 100%;
+}
+
+.hero-interior {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 350px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://i.imgflip.com/3drlvv.jpg");
+
+  background-size: cover;
+  background-position: 5% 35%;
+  background-repeat: no-repeat;
+}
+
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+/* ── ETIQUETA DE SECCIÓN ─────────────────────────────────── */
+.etiqueta-seccion {
+  display: inline-block;
+  background: #c00;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  
+}
+
+.etiqueta-seccion.centrada {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+/* ── SERVICIOS ───────────────────────────────────────────── */
+
+.seccion-servicios {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cuadricula-servicios {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.tarjeta-servicio {
+  flex: 1;
+  font-size: 13px;
+  color: #555;
+}
+
+.icono-servicio {
+  font-size: 24px;
+  max-width: 2rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.titulo-servicio {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.texto-servicio {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.enlace-mas {
+  font-size: 12px;
+  color: #c00;
+}
+
+/* ── JUGADORES ───────────────────────────────────────────── */
+.seccion-jugadores {
+  max-width: 960px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cuadricula-jugadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+/*
+  Cada tarjeta ocupa ~1/5 del ancho (aprox. 175px en 960px)
+  Las fotos son más grandes, similares a la imagen de referencia.
+*/
+.tarjeta-jugador {
+  flex: 0 0 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* Foto grande que cubre el ancho de la tarjeta */
+.foto-jugador {
+  width: 170px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-jugador {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  background: #ccc;
+}
+
+
+.nombre-jugador {
+  font-size: 12px;
+  color: #222;
+}
+
+.bio-jugador {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.enlace-jugador {
+  font-size: 11px;
+  color: #c00;
+}
+
+/* ── TRABAJOS ────────────────────────────────────────────── */
+.seccion-trabajos {
+  max-width: 960px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.cuadricula-trabajos {
+  display: flex;
+  gap: 10px;
+}
+
+.elemento-trabajo {
+  flex: 1;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* imágenes intento */
+.trabajo-1 {
+  background-image: url("https://i.pinimg.com/736x/1c/0d/46/1c0d46eb37e0f8b74e12af82b76b8851.jpg");
+  background-position: top center;
+}
+
+.trabajo-2 {
+  background-image: url("https://media.tenor.com/zxOs4Unxm_8AAAAM/dog-meme.gif");
+}
+
+.trabajo-3 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/250px-Original_Doge_meme.jpg");
+}
+
+/* ── PIE DE PÁGINA ───────────────────────────────────────── */
+.pie-pagina {
+  background: #e8e8e8;
+  color: #555;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.pie-interior {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px 20px;
+}
+
+.columna-pie {
+  flex: 1;
+  min-width: 180px;
+}
+
+.titulo-pie {
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.entrada-blog {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.miniatura-blog {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* imágenes individuales */
+.miniatura-1 {
+  background-image: url("https://pbs.twimg.com/media/G6zWKdAW8AAFIEg?format=jpg&name=large");
+}
+
+.miniatura-2 {
+  background-image: url("https://pbs.twimg.com/media/HEUtt8XWEAA1dpM?format=jpg&name=large");
+}
+
+.titulo-entrada {
+  color: #c00;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.texto-entrada {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.empresa-nombre {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.empresa-direccion,
+.empresa-telefono,
+.empresa-horario {
+  color: #777;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.empresa-email {
+  color: #c00;
+}
+
+.empresa-horario-titulo {
+  color: #444;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.texto-pie {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Barra inferior del pie */
+.barra-inferior {
+  background: #ddd;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+}
+
+.barra-inferior a {
+  color: #c00;
+}
