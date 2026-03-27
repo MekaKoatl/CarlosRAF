@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9</title>
+  </head>
+  <body>
+    <h1 id="In"></h1>
+    <p id="r1"></p>
+    <p id="r2"></p>
+
+    <script>
+      let radio = prompt("Introduce el radio de un circulo:");
+
+      let area = parseInt(Math.PI * radio ** 2);
+      let perimetro = parseInt(2 * radio * Math.PI);
+
+      document.getElementById("In").innerHTML =
+        "Si tu radio es (" + radio + ") tu resultado es ";
+      document.getElementById("r1").innerHTML = "Area: " + area;
+      document.getElementById("r2").innerHTML = "Perimetro: " + perimetro;
+    </script>
+  </body>
+</html>

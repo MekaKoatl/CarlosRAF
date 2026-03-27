@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13</title>
+  </head>
+  <body>
+    <script>
+      let anchura = parseInt(
+        prompt("Introduce la anchura de un cuadrado o rectangulo:"),
+      );
+      let altura = parseInt(
+        prompt("Introduce el perimetro de un cuadrado o rectangulo:"),
+      );
+
+      let area = anchura * altura;
+      let perimetro = 2 * (anchura + altura);
+
+      alert(
+        "Si tu anchura es: " +
+          anchura +
+          " y tu altura es: " +
+          altura +
+          ", Tu Area es: " +
+          area +
+          ", y Tu Perimetro es: " +
+          perimetro,
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7</title>
+  </head>
+  <body>
+    <p id="r1"></p>
+    <p id="r2"></p>
+    <p id="r3"></p>
+    <p id="r4"></p>
+    <p id="r5"></p>
+    <p id="r6"></p>
+
+    <script>
+      let input1 = prompt("Introduce un número:");
+      let input2 = prompt("Introduce otro número:");
+
+      let sum = parseInt(input1 + input2);
+      let res = parseInt(input1 - input2);
+      let mul = parseInt(input1 * input2);
+      let div = parseInt(input1 / input2);
+
+      document.getElementById("r1").innerHTML = sum;
+      document.getElementById("r2").innerHTML = res;
+      document.getElementById("r3").innerHTML = mul;
+      document.getElementById("r4").innerHTML = div;
+    </script>
+  </body>
+</html>

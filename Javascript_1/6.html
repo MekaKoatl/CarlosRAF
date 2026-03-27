@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6</title>
+  </head>
+  <body>
+    <p id="r1"></p>
+    <p id="r2"></p>
+    <p id="r3"></p>
+    <p id="r4"></p>
+    <p id="r5"></p>
+    <p id="r6"></p>
+
+    <script>
+      let pri = parseInt(-5 + 8 * 6);
+      let seg = parseInt((55 + 9) % 6);
+      let ter = parseInt(20 + (-3 * 5) / 8);
+      let cuar = parseInt(5 + (15 / 3) * 2 - (8 % 3));
+      let quin = parseInt((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5));
+      let sext = parseInt(
+        4.0 * (1 - 1.0 / 3 + 1.0 / 5 - 1.0 / 7 + 1.0 / 9 - 1.0 / 1),
+      );
+
+      document.getElementById("r1").innerHTML = pri;
+      document.getElementById("r2").innerHTML = seg;
+      document.getElementById("r3").innerHTML = ter;
+      document.getElementById("r4").innerHTML = cuar;
+      document.getElementById("r5").innerHTML = quin;
+      document.getElementById("r6").innerHTML = sext;
+    </script>
+  </body>
+</html>

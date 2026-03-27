@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14</title>
+  </head>
+  <body>
+    <script>
+      let distancia = parseInt(prompt("Introduce una distancia es metros:"));
+
+      let horas = parseInt(prompt("Introduce las horas:"));
+      let minutos = parseInt(prompt("Introduce los minutos:"));
+      let segundos = parseInt(prompt("Introduce los segundos:"));
+
+      let tiempoTotal = horas * 3600 + minutos * 60 + segundos;
+
+      let metr = distancia / tiempoTotal;
+      let kilometr = (distancia * 0.001) / tiempoTotal;
+
+      alert(
+    "Distancia: " + distancia + " metros\n" +
+    "Tiempo: " + horas + "h " + minutos + "m " + segundos + "s\n" +
+    "Velocidad: " + metr.toFixed(2) + " m/s\n" +
+    "Velocidad: " + kilometr.toFixed(4) + " km/s"
+  );
+    </script>
+  </body>
+</html>
