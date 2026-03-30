@@ -7,20 +7,14 @@
   </head>
   <body>
     <script>
-      let numdigi = parseInt(prompt("Introduce un número de 3 digitos (Ej: 108):"));
+      let numdigi = prompt("Introduce un número de 3 dígitos (Ej: 108):");
 
-      let a2 = b;
-      let b2 = a;
+      let suma = 0;
+      for (let digito of numdigi) {
+        suma += parseInt(digito);
+      }
 
-      a = a2;
-      b = b2;
-
-      alert(
-        "Ahora he cambiado tus valores, ahora el primero es: " +
-          a +
-          ", y el segundo es: " +
-          b,
-      );
+      alert("La suma de los dígitos es: " + suma);
     </script>
   </body>
 </html>

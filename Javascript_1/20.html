@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18</title>
+  </head>
+  <body>
+    <script>
+      let inmin = parseInt(prompt("Introduce minutos:"));
+
+      let años = Math.floor(inmin / (60 * 24 * 365));
+      let dias = Math.floor((inmin % (60 * 24 * 365)) / (60 * 24));
+
+      alert(años + " años, " + dias + " días, " + inmin + " minutos.");
+    </script>
+  </body>
+</html>

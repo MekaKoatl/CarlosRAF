@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Separar suma</title>
+  </head>
+  <body>
+    <script>
+      let operacion = prompt("Introduce una suma (Ej: 23+56):");
+
+      let posicion = operacion.indexOf("+");
+
+      let num1 = operacion.substring(0, posicion);
+      let num2 = operacion.substring(posicion + 1);
+
+      alert("Número 1: " + num1 + "\nNúmero 2: " + num2);
+    </script>
+  </body>
+</html>

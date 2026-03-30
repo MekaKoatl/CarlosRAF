@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18</title>
+  </head>
+  <body>
+    <script>
+      let insegundos = parseInt(prompt("Introduce segundos:"));
+
+      let horas = Math.floor(insegundos / 3600);
+      let minutos = Math.floor((insegundos % 3600) / 60);
+      let segundos = insegundos % 60;
+
+      alert(
+        horas + " horas, " + minutos + " minutos, " + segundos + " segundos.",
+      );
+    </script>
+  </body>
+</html>
