@@ -1,0 +1,50 @@
+<html>
+
+<body>
+<script>
+let edad = window.prompt("Dime tu edad")
+let carnet
+let nombre
+let direccion
+let alquilerDias
+let coste
+const dayCost = 25
+const weekCost = 150
+let alquilerFinal
+
+
+if (edad < 18) {
+window.alert("No podra alquilar un vehiculo")
+} else {
+carnet = window.prompt("Tienes carnet de conducir?").toLowerCase()
+if (carnet === "si") {
+nombre = window.prompt("Escribe tu nombre y apellido")
+direccion = window.prompt("Escribe la ciudad de recogida del vehiculo")
+alquilerDias = paseInt(window.prompt("Numero de dias de alquiler"))
+
+//-------------------
+
+if (alquilerDias < 7) {
+alquilerFinal = alquilerDias * dayCost
+} else {
+alquilerFinal = parseInt(alquilerDias / 7) * 150 + (alquilerDias % 7) * dayCost
+}
+
+//-------------------
+
+
+window.alert(`
+Nombre y apellido: ${nombre}
+Direccion de recogida: ${direccion}
+Alquiler: ${alquilerFinal}€
+`)
+
+}
+else {
+window.alert("No puedes alquilar un coche")
+}
+}
+</script>
+</body>
+
+</html>

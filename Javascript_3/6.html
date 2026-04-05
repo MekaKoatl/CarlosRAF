@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6</title>
+  </head>
+  <body>
+    <script>
+      let num = parseInt(prompt("Introduce un número:"));
+
+    //   if (num < 1) {
+    //     alert("El número es menor que 1, no se calcula el cuadrado ni el cubo. No se la razón, no soy pitagoras");
+    //   } else {
+    //     let cuadrado = num * num;
+    //     let cubo     = num * num * num;
+    //     alert("Cuadrado: " + cuadrado + "\nCubo: " + cubo);
+    //   }
+
+      if (num < 1) {
+        alert("El número es menor que 1, no se calcula el cuadrado ni el cubo. No se la razón, no soy pitagoras");
+      } else {
+        let cuadrado = Math.pow(num, 2);
+        let cubo = Math.pow(num, 3);
+        alert("Numero: " + num + "\n" + num + "² = " + cuadrado + "\n" + num + "³ = " + cubo);
+      }
+    </script>
+  </body>
+</html>

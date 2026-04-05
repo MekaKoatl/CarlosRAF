@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12a</title>
+  </head>
+  <body>
+    <script>
+      let puesto = parseInt(prompt("¿En qué puesto acabaste?"));
+
+      //Ganaste o no
+      if (puesto === 1) {
+        alert("Ganaste");
+      } else {
+        alert("Lo importante es participar");
+      }
+
+      //Medalla con if
+      if (puesto === 1) {
+        alert("Medalla de oro");
+      } else if (puesto === 2) {
+        alert("Medalla de plata");
+      } else if (puesto === 3) {
+        alert("Medalla de bronce");
+      } else {
+        alert("Lo importante es participar");
+      }
+
+      //Medalla con switch
+      switch (puesto) {
+        case 1:
+          alert("Medalla de oro");
+          break;
+        case 2:
+          alert("Medalla de plata");
+          break;
+        case 3:
+          alert("Medalla de bronce");
+          break;
+        default:
+          alert("Lo importante es participar");
+      }
+
+      //Podium
+      if (puesto === 1 || puesto === 2 || puesto === 3) {
+        alert("Sube al podium");
+      } else {
+        alert("Se acabó la carrera");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Introduce el primer número:"));
+      let num2 = parseInt(prompt("Introduce el segundo número:"));
+      let num3 = parseInt(prompt("Introduce el tercer número:"));
+
+      if (num2 - num1 === 20) {
+        alert("El primer número es 20 menos que el segundo.");
+      } else if (num3 - num1 === 20) {
+        alert("El primer número es 20 menos que el tercero.");
+      } else if (num3 - num2 === 20) {
+        alert("El segundo número es 20 menos que el tercero.");
+      } else if (num1 - num2 === 20) {
+        alert("El segundo número es 20 menos que el primero.");
+      } else if (num1 - num3 === 20) {
+        alert("El tercer número es 20 menos que el primero.");
+      } else if (num2 - num3 === 20) {
+        alert("El tercer número es 20 menos que el segundo.");
+      } else {
+        alert("Ningún número es exactamente 20 menos que otro.");
+      }
+    </script>
+  </body>
+</html>

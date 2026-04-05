@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21</title>
+  </head>
+  <body>
+    <script>
+      let nombre = prompt("Introduce tu nombre:");
+      let ventas = parseFloat(prompt("Introduce el total de ventas en euros:"));
+
+      if (ventas > 500) {
+        let extra = ventas * 0.05;
+        alert(nombre + "\nVentas: " + ventas + "€\nExtra (5%): " + extra + "€");
+      } else {
+        alert(nombre + "\nVentas: " + ventas + "€\nNo has llegado al mínimo para recibir un extra.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19</title>
+  </head>
+  <body>
+    <script>
+      let ex1 = parseFloat(prompt("Nota del primer examen (0-5):"));
+      let ex2 = parseFloat(prompt("Nota del segundo examen (0-5):"));
+      let ex3 = parseFloat(prompt("Nota del tercer examen (0-5):"));
+
+      let notaFinal = Math.max(ex1, ex2) + ex3;
+
+      let calificacion;
+      if (notaFinal === 10) {
+        calificacion = "Matrícula";
+      } else if (notaFinal >= 9) {
+        calificacion = "Sobresaliente";
+      } else if (notaFinal >= 7) {
+        calificacion = "Notable";
+      } else if (notaFinal >= 6) {
+        calificacion = "Bien";
+      } else if (notaFinal >= 5) {
+        calificacion = "Suficiente";
+      } else {
+        calificacion = "Suspenso";
+      }
+
+      alert(`Nota final: ${notaFinal}\nCalificación: ${calificacion}`);
+    </script>
+  </body>
+</html>

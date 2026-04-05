@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24</title>
+  </head>
+  <body>
+    <script>
+      let num = prompt("Introduce un número de tres cifras:");
+
+      let d1 = parseInt(num[0]);
+      let d2 = parseInt(num[1]);
+      let d3 = parseInt(num[2]);
+
+      if (d1 % 2 === 0 && d2 % 2 === 0 && d3 % 2 === 0) {
+        alert(num + ": Todas las cifras son pares.");
+      } else if (d1 % 2 !== 0 && d2 % 2 !== 0 && d3 % 2 !== 0) {
+        alert(num + ": Todas las cifras son impares.");
+      } else {
+        alert(num + ": El número tiene cifras pares e impares.");
+      }
+    </script>
+  </body>
+</html>

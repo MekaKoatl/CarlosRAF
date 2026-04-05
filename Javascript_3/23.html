@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23</title>
+  </head>
+  <body>
+    <script>
+      let año = parseInt(prompt("Introduce un año:"));
+
+      if (año % 400 === 0) {
+        alert(año + " es bisiesto.");
+      } else if (año % 100 === 0) {
+        alert(año + " NO es bisiesto.");
+      } else if (año % 4 === 0) {
+        alert(año + " es bisiesto.");
+      } else {
+        alert(año + " NO es bisiesto.");
+      }
+    </script>
+  </body>
+</html>

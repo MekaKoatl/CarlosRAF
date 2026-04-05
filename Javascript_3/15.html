@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15</title>
+  </head>
+  <body>
+    <script>
+      let helados = parseInt(prompt("¿Cuántos helados quieres comprar?"));
+      let precio = 2;
+
+      let pagado = helados * precio;
+      let total = helados;
+
+      if (helados > 10) {
+        total = helados + 1;
+      }
+
+     
+
+      alert(`
+        Helado pedidos: ${total}
+        Precio por helado: ${precio}€
+        Helados cobrados ${helados}
+        Pagado: ${pagado}€
+        `);
+    </script>
+  </body>
+</html>

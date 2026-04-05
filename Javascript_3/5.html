@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5</title>
+  </head>
+  <body>
+    <script>
+      let dia = prompt("Introduce un día de la semana:").toLowerCase();
+
+      // Con switch
+      switch (dia) {
+        case "lunes":
+        case "martes":
+        case "miércoles":
+        case "jueves":
+        case "viernes":
+          alert("Hoy es " + dia);
+          break;
+        case "sabado":
+        case "miercoles":
+          alert(
+            "Hoy es " + dia + ", y Sábado y Miércoles se escribe con acento",
+          );
+          break;
+        case "sábado":
+        case "domingo":
+          alert("Es fin de semana");
+          break;
+        default:
+          alert("Día no válido");
+      }
+
+      // if/else
+      if (
+        dia === "lunes" ||
+        dia === "martes" ||
+        dia === "miércoles" ||
+        dia === "jueves" ||
+        dia === "viernes"
+      ) {
+        alert("Hoy es " + dia);
+      } else if (dia === "sábado" || dia === "domingo") {
+        alert("Es fin de semana");
+      } else if (dia === "sabado" || dia === "miercoles") {
+        alert("Hoy es " + dia + ", y Sábado y Miércoles se escribe con acento");
+      } else {
+        alert("Día no válido");
+      }
+    </script>
+  </body>
+</html>

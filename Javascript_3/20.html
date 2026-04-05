@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20</title>
+  </head>
+  <body>
+    <script>
+      let temp = parseFloat(prompt("Introduce un valor de temperatura:"));
+      let conver = prompt("¿A qué quieres convertirlo?\nC → Centígrados\nF → Fahrenheit").toUpperCase();
+
+      if (conver === "F") {
+        //C° a F°
+        let fahrenheit = (temp * 9 / 5) + 32;
+        alert(valor + "°C equivale a " + fahrenheit + "°F");
+      } else if (conver === "C") {
+        //F° a C°
+        let centigrados = (temp - 32) * 5 / 9;
+        alert(valor + "°F equivale a " + centigrados.toFixed(2) + "°C");
+      } else {
+        alert("Opción no válida. Escribe C o F.");
+      }
+    </script>
+  </body>
+</html>

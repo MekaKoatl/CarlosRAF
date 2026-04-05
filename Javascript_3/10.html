@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("Introduce el primer valor:"));
+      let num2 = parseInt(prompt("Introduce el segundo valor:"));
+
+      if (num1 === num2) {
+        alert("0");
+      } else if (num1 % 6 === num2 % 6) {
+        alert(Math.min(num1, num2));
+      } else {
+        alert(Math.max(num1, num2));
+      }
+    </script>
+  </body>
+</html>

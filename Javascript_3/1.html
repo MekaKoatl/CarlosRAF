@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1</title>
+  </head>
+  <body>
+    <script>
+      let num1 = parseFloat(prompt("Introduce el primer número:"));
+      let num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+      let suma = num1 + num2;
+      let resta = num1 - num2;
+      let mul = num1 * num2;
+      let media = (num1 + num2) / 2;
+      let mayor = Math.max(num1, num2);
+      let menor = Math.min(num1, num2);
+
+      alert(
+        "Suma:             " +
+          suma +
+          "\n" +
+          "Resta:            " +
+          resta +
+          "\n" +
+          "Multiplicación:   " +
+          mul +
+          "\n" +
+          "Media:            " +
+          media +
+          "\n" +
+          "Mayor:            " +
+          mayor +
+          "\n" +
+          "Menor:            " +
+          menor,
+      );
+    </script>
+  </body>
+</html>

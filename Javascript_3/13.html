@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13</title>
+  </head>
+  <body>
+    <script>
+      let frase = prompt("Introduce una frase o texto:");
+      let longitud = frase.length;
+      let mitad = Math.floor(longitud / 2);
+
+      if (longitud % 2 === 0) {
+        alert("Los dos caracteres centrales son: " + frase.substring(mitad - 1, mitad + 1));
+      } else {
+        alert("El carácter central es: " + frase[mitad]);
+      }
+    </script>
+  </body>
+</html>
