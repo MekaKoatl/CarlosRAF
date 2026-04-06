@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+  </head>
+  <body>
+    <div>
+      <label for="name">¿Cual es tu nombre?</label><br />
+      <input type="text" id="name" /><br />
+      <br />
+      <label for="name">¿Cual es tu edad?</label><br />
+      <input type="text" id="age" /><br /><br />
+      <button onclick="guardar()">Guardar</button>
+      <br /><br />
+      <p id="mensaje"></p>
+    </div>
+
+    <script>
+      function guardar() {
+        let name = document.getElementById("name").value;
+        let age = parseInt(document.getElementById("age").value)
+
+        //Con If
+        // if (age <= 17) {
+        //     document.getElementById("mensaje").innerText = `Hola ${name}, eres menor de edad..`
+        // } else {
+        //      document.getElementById("mensaje").innerText = `Hola ${name}, eres mayor de edad..`
+        // }
+
+        // Con Switch
+        switch (age) {
+          case age <= 17:
+            document.getElementById("mensaje").innerText =
+              `Hola ${name}, eres menor de edad..`;
+            break;
+          default:
+            document.getElementById("mensaje").innerText =
+              `Hola ${name}, eres mayor de edad..`;
+        }
+      }
+    </script>
+  </body>
+</html>

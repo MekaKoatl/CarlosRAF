@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+
+    <div>
+        <p>dame tu nombre</p>
+        <p id="show-name"></p>
+        <input type="text" id="name">
+        <button onclick="guardar()">guardar</button>
+    </div>
+
+
+
+    <div id="container">
+      <p>La longitud de tu nombre es:</p>
+    </div>
+
+    <script>
+        function guardar(){
+            let name = document.getElementById("name").value
+            document.getElementById("show-name").innerText = `tu nombre es ${name}`
+        }
+
+
+    </script>
+
+
+  </body>
+</html>
