@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>26</title>
+  </head>
+  <body>
+    <script>
+     
+      const opciones = ["piedra", "papel", "tijera"];
+
+
+      const eleccion = prompt("Elige: piedra, papel o tijera")
+        .toLowerCase()
+        .trim();
+
+     
+      if (!eleccion || !opciones.includes(eleccion)) {
+        alert("Opción no válida. Elige piedra, papel o tijera.");
+      } else {
+        const pc = opciones[Math.floor(Math.random() * 3)];
+
+        alert(`Tú: ${eleccion} | PC: ${pc}`);
+
+        // Resultado
+        if (eleccion === pc) {
+          alert("¡Empate!");
+        } else if (
+          (eleccion === "piedra" && pc === "tijera") ||
+          (eleccion === "papel" && pc === "piedra") ||
+          (eleccion === "tijera" && pc === "papel")
+        ) {
+          alert("¡Ganaste!");
+        } else {
+          alert("¡Loser!");
+        }
+      }
+    </script>
+  </body>
+</html>

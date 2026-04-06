@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25</title>
+  </head>
+  <body>
+    <script>
+      let res = prompt("Preguntale o dile algo a Roberto");
+
+      if (!res || res.trim() === "") {
+        alert("Vale con esas tenemos...");
+      } else if (res.includes("?!") || res.includes("¡¿")) {
+        alert("¡Eh, tranquilízate! Yo sé lo que hago.");
+      } else if (res.includes("?") || res.includes("¿")) {
+        alert("¡Claro!");
+      } else if (res.includes("!") || res.includes("¡")) {
+        alert("¡Eh!, tranquilízate.");
+      } else {
+        alert("Sin más");
+      }
+    </script>
+  </body>
+</html>

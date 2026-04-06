@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>27</title>
+  </head>
+  <body>
+    <script>
+      // Inicio
+      let opcion = prompt(
+        "Te encuentras afuera de una mazmorra. Dicha mazmorra solia ser un castillo, hasta que un dragón lo destruyo y causo que el castillo se enterrara dentro de una caverna bajo el suelo. Has sido enviado a matar un dragón o recuperar la corona del reino.\n\n" +
+          "¿Qué haces?\n" +
+          "1. Entrar por la puerta principal\n" +
+          "2. Buscar otra entrada de la mazmorra\n" +
+          "(Ingresa 1 o 2 para elegir la opción que deseas)"
+      );
+
+      // 1 - Puerta principal
+      if (opcion === "1") {
+        opcion = prompt(
+          "Entras por la puerta principal. Dentro hay dos pasillos oscuros.\n\n" +
+            "El pasillo de la izquierda se ve húmedo, con un olor extraño, ranuras y musgo rodeando sus paredes.\n" +
+            "El pasillo de la derecha parece destruido, con un olor a horno y huesos desde el inicio hasta donde alcanza la vista.\n\n" +
+            "¿Qué haces?\n" +
+            "1. Tomar el pasillo de la izquierda\n" +
+            "2. Tomar el pasillo de la derecha"
+        );
+
+        if (opcion === "1") {
+          alert(
+            "Caminas por unos minutos. Mientras tu mente se enfoca en lo que harás al ver al dragón, sientes que tu pie presiona algo en el suelo. Las ranuras de la pared disparan picos metálicos que atraviesan tu cuerpo. ¡Fin del juego!"
+          );
+        } else if (opcion === "2") {
+          opcion = prompt(
+            "Mientras te adentras en el pasillo, eventualmente encuentras una pequeña puerta de piedra. Al empujarla, encuentras una sala del tesoro. En la cima de una montaña de oro encuentras la corona. Tus oídos escuchan en la lejanía un ronquido profundo, como si una montaña estuviera durmiendo.\n\n" +
+              "¿Qué haces?\n" +
+              "1. Tomar la corona\n" +
+              "2. Llenar tu mochila solo con dinero y salir de la mazmorra"
+          );
+
+          if (opcion === "1") {
+            opcion = prompt(
+              "La corona es hermosa. Tu corazón se llena de orgullo y admiración al verla. Una ligera luz emana de ella; no sabes si es el reflejo del sol que entra por una ruptura en la mazmorra o si es algo más...\n\n" +
+                "Tu misión es regresar la corona a la familia real, pero también sabes que si te la pones, tú serías el rey o la reina del reino.\n\n" +
+                "¿Qué haces?\n" +
+                "1. Ponerte la corona en la cabeza\n" +
+                "2. Guardar la corona en tu mochila"
+            );
+
+            if (opcion === "1") {
+              alert(
+                "Al ponerte la corona, sientes el poder y la responsabilidad asociados con ella. Mientras imaginas tu nueva vida, no percibes la oscura influencia de la corona mágica. Lanzas un grito de dolor y tus manos intentan quitarla, pero dejan de obedecerte. Poco a poco pierdes control de tu cuerpo hasta que dejas de ser. ¡Fin del juego!"
+              );
+            } else if (opcion === "2") {
+              alert("Escapas de la mazmorra con la corona guardada en tu mochila. ¡Ganaste!");
+            } else {
+              alert("Opción no válida.");
+            }
+
+          } else if (opcion === "2") {
+            alert("Escapas de la mazmorra con una mochila llena de oro. ¡Ganaste!");
+          } else {
+            alert("Opción no válida.");
+          }
+        } else {
+          alert("Opción no válida.");
+        }
+
+      // 2 - Rodear la mazmorra
+      } else if (opcion === "2") {
+        opcion = prompt(
+          "Rodeando la mazmorra encuentras una grieta. Si usas tu bota para patearla, puede abrirse lo suficiente para entrar. Más al fondo también ves lo que parece ser una ventana de la mazmorra.\n\n" +
+            "¿Qué haces?\n" +
+            "1. Entrar por la ventana\n" +
+            "2. Usar tu bota para ampliar la grieta y entrar"
+        );
+
+        if (opcion === "1") {
+          opcion = prompt(
+            "Entras y ves los restos de un caballero. Parece haber caído peleando contra algo. Su armadura denota una vida religiosa y noble. Una espada mágica yace entre sus manos.\n\n" +
+              "¿Qué haces?\n" +
+              "1. Tomar la espada\n" +
+              "2. Hacer una oración o gesto para que el caballero descanse en paz"
+          );
+
+          if (opcion === "1") {
+            alert(
+              "Cuando tus manos toman la espada, el esqueleto cobra vida. Una luz roja se enciende en lo que serían los ojos del caballero. El cadáver te empuja y desenvaina la espada. ¡Fin del juego!"
+            );
+          } else if (opcion === "2") {
+            alert(
+              "El cadáver parece dar algo similar a un último suspiro. Una luz mágica emana de la armadura y el caballero desaparece, dejando atrás su espada. Al tomarla, ves que es del linaje real: quien tenga la espada será el próximo rey o reina. ¡Ganaste!"
+            );
+          } else {
+            alert("Opción no válida.");
+          }
+
+        } else if (opcion === "2") {
+          opcion = prompt(
+            "La grieta se abre y pasas tu cuerpo a través de ella. Caes en un pasillo antiguo. Antes de que puedas analizar tu entorno, el suelo tiembla y se rompe bajo tus pies. Caes varios pisos hasta chocar con algo que detiene tu caída. Huele a humo y oro. Enciendes tu antorcha y ves que estás en una caverna donde duerme un dragón. Su cola fue lo que detuvo tu caída.\n\n" +
+              "¿Qué haces?\n" +
+              "1. Intentar pasar sigilosamente\n" +
+              "2. Huir corriendo"
+          );
+
+          if (opcion === "1") {
+            alert(
+              "Pasas sin despertar al dragón. Mientras escapas, ves lo que parece ser un anillo sobre el cadáver de alguien muy pequeño. El anillo te llama a tomarlo. Escapas de la caverna con tu vida y el anillo. ¡Ganaste!"
+            );
+          } else if (opcion === "2") {
+            alert(
+              "El ruido despierta al dragón. El fuego de su boca es lo último que ven tus ojos. ¡Fin del juego!"
+            );
+          } else {
+            alert("Opción no válida.");
+          }
+        } else {
+          alert("Opción no válida.");
+        }
+
+      } else {
+        alert("Opción no válida.");
+      }
+    </script>
+  </body>
+</html>
