@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>8</title>
+  </head>
+  <body>
+    <div>
+      <label for="name">¿Cual es tu nombre?</label><br />
+      <input type="text" id="name" /><br />
+      <br />
+      <label for="name">¿Cual es tu apellido?</label><br />
+      <input type="text" id="lastname" /><br />
+      <br />
+      <label for="name">¿Cual es tu edad?</label><br />
+      <input type="text" id="age" /><br /><br />
+      <button onclick="guardar()">Guardar</button>
+      <br /><br />
+      <p id="mensaje"></p>
+    </div>
+
+    <script>
+      function guardar() {
+        let name = document.getElementById("name").value;
+        let lastname = document.getElementById("lastname").value;
+        let age = parseInt(document.getElementById("age").value);
+
+        if (age <= 17) {
+          document.getElementById("mensaje").innerText =
+            `Hola ${name}, lo sentimos pero eres menor de edad, no puedes rentar un auto`;
+          return;
+        }
+        if (age >= 18) {
+          document.getElementById("mensaje").innerHTML =
+            `Hola ${name}, ¿tienes carnet de conducir? <br>
+            <input type="radio" id="carnetSi" name="carnet" value="si">
+            <label for="carnetSi">Si</label><br>
+            <input type="radio" id="carnetNo" name="carnet" value="no">
+            <label for="carnetNo">No</label><br>
+            <button onclick="checkcarnet()">Guardar</button>`;
+        }
+      }
+
+      function checkcarnet() {
+        let name = document.getElementById("name").value;
+        let carnet = document.querySelector('input[name="carnet"]:checked');
+        if (carnet.value == "no") {
+          document.getElementById("mensaje").innerText =
+            `${name}, lo sentimos pero no tienes carnet, no puedes rentar un auto`;
+          return;
+        } else {
+          document.getElementById("mensaje").innerHTML =
+            `Hola ${name}, por favor ingresa los siguientes datos: <br>
+            <label for="locacion">¿De que ciudad o pueblo estaras rentando el vehiculo?</label><br />
+            <input type="text" id="locacion" /><br /><br />
+            <label for="dias">¿Por cuantos días estaras rentando el vehiculo?</label><br />
+            <input type="number" id="dias" /><br /><br />
+            <button onclick="checkextrainfo()">Guardar</button>`;
+        }
+      }
+
+      function checkextrainfo() {
+        let name = document.getElementById("name").value;
+        let lastname = document.getElementById("lastname").value;
+        let age = parseInt(document.getElementById("age").value);
+        let locacion = document.getElementById("locacion").value;
+        let dias = parseInt(document.getElementById("dias").value);
+        let costo = 25;
+        let costomostrado = dias * costo;
+
+        if (dias == 7) {
+          costomostrado = 150;
+        } else if (dias > 7) {
+            costomostrado = 150 + ((dias-7)*costo);
+        }
+    
+        document.getElementById("mensaje").innerHTML =
+          `Muy bien ${name}, estos son los datos ingresados: <br>
+          Nombre y Apellido: ${name} ${lastname} <br>
+          Edad: ${age} <br>
+          Carnet: Si <br>
+          Punto de recogida: ${locacion} <br>
+          Dias que se rentara el auto: ${dias} <br>
+          Costo total: $${costomostrado}`;
+      }
+    </script>
+  </body>
+</html>

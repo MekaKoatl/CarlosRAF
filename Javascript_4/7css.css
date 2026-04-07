@@ -1,0 +1,291 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: #c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.padder{
+  padding-bottom: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* -- Header ---------------------------------------------- */
+.header-sitio {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 20px;
+}
+
+.header-interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+/* Logo? */
+.logotipo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-titulo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.logo-titulo::first-letter {
+  font-size: 28px;
+}
+
+.logo-subtitulo {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+/* Nav */
+.navegacion {
+  display: flex;
+  background: rgba(204, 0, 0, 0);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.enlace-nav {
+  color: #000000;
+  padding: 0 16px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.enlace-nav:hover,
+.enlace-nav.activo {
+  background: rgb(0, 79, 170);
+  text-decoration: none;
+  color: #fff;
+}
+
+/*---------------------------- Los divs e intento de color */
+/* OG: https://codepen.io/bansal-io/pen/mdereZN */
+
+#random-pattern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 50vh;
+}
+
+#random-pattern button {
+  padding: 10px 30px;
+  border: 3px solid black;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 6px;
+  font-weight: bold;
+}
+#code {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 20px 50px;
+  -moz-user-select: all; /* Firefox 43+ */
+}
+
+.numero-al {
+  text-align: center;
+}
+
+input[type="number"] {
+  padding: 2rem;
+  color: #3d3c3c;
+  font: bold 20px system-ui;
+  width: 10rem;
+  margin: 5rem 0;
+}
+#randomnumber {
+  font-size: 80px;
+}
+
+/* Jugadores */
+/* Foto grande que cubre el ancho de la tarjeta */
+
+/* -- JUGADORES ----------------------------- */
+.seccion-jugadores {
+  max-width: 960px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cuadricula-jugadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+.tarjeta-jugador {
+  flex: 0 0 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.foto-jugador {
+  width: 170px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-jugador {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.nombre-jugador {
+  font-size: 12px;
+  color: #222;
+}
+
+.bio-jugador {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.enlace-jugador {
+  font-size: 11px;
+  color: #c00;
+}
+
+/* -- PIE DE PÁGINA ------------------------ */
+.pie-pagina {
+  background: #e8e8e8;
+  color: #555;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.pie-interior {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px 20px;
+}
+
+.columna-pie {
+  flex: 1;
+  min-width: 180px;
+}
+
+.titulo-pie {
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.entrada-blog {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.miniatura-blog {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.miniatura-1 {
+  background-image: url("https://pbs.twimg.com/media/G6zWKdAW8AAFIEg?format=jpg&name=large");
+}
+
+.miniatura-2 {
+  background-image: url("https://pbs.twimg.com/media/HEUtt8XWEAA1dpM?format=jpg&name=large");
+}
+
+.titulo-entrada {
+  color: #c00;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.texto-entrada {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.texto-pie {
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Barra inferior del pie */
+.barra-inferior {
+  background: #ddd;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+}
+
+.barra-inferior a {
+  color: #c00;
+}
