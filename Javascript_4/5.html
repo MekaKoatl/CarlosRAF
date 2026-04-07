@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>5</title>
+  </head>
+  <body>
+    <h2>Calculadora</h2>
+
+    <label>Número A: <input type="number" id="numA" /></label><br /><br />
+    <label>Número B: <input type="number" id="numB" /></label><br /><br />
+
+    <button onclick="calcular()">Calcular</button>
+
+    <br /><br />
+
+    <div id="resultado"></div>
+
+    <script>
+      function calcular() {
+        const a = parseFloat(document.getElementById("numA").value);
+        const b = parseFloat(document.getElementById("numB").value);
+
+        document.getElementById("resultado").innerHTML = `
+        <p>Suma: ${a} + ${b} = ${a + b}</p>
+        <p>Resta: ${a} - ${b} = ${a - b}</p>
+        <p>Multiplicación: ${a} × ${b} = ${a * b}</p>
+        <p>División: ${a} ÷ ${b} = ${division}</p>
+        <p>Resto: ${a} % ${b} = ${resto}</p>
+      `;
+      }
+    </script>
+  </body>
+</html>
