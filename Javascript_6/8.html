@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8</title>
+  </head>
+  <body>
+    <script>
+      let nums = [];
+      let media = 0;
+
+      for (let i = 0; i < 20; i++) {
+        nums.push(parseInt(Math.random() * (35-18) + 18));
+      }
+
+      for (let o = 0; o < 10; o++) {
+        media += nums[o];
+      }
+
+      media = media / 20;
+
+      alert(media);
+    </script>
+  </body>
+</html>

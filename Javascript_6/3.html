@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      let nums = [];
+      let show = "";
+
+      for (let i = 20; i > 10; i--) {
+      nums.push(i)
+      }
+
+      for (let o = 0; o < 10; o++) {
+        show += `<li>${nums[o]}</li>`;
+      }
+      document.getElementById("list").innerHTML = show;
+    </script>
+  </body>
+</html>

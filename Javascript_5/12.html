@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12</title>
+  </head>
+  <body>
+    <script>
+      let numUser = prompt("Introduce tres cifras");
+      let sum = 0;
+
+      while (numUser.length != 3) {
+        numUser = prompt("INTRODUCE TRES CIFRAS");
+      }
+
+      for (let i = 0; i < numUser.length; i++){
+        sum += parseInt(numUser.substring(i,i+1))
+      }
+      alert(sum)
+    </script>
+  </body>
+</html>
