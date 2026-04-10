@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+  </head>
+  <body>
+    <div>
+      <p id="showcase"></p>
+    </div>
+    <script>
+      console.log("Hola")
+      let num = parseInt(prompt("Introduce una numero de tres digitos"));
+      let show = "";
+
+      if (num <= 99) {
+        document.getElementById("showcase").style.color = "green";
+        document.getElementById("showcase").innerText = `Tu numero es ${num}`;
+      } else if (num >= 100 && num <= 200) {
+         document.getElementById("showcase").style.color = "yellow";
+        document.getElementById("showcase").innerText = `Tu numero es ${num}`;
+      } else {
+         document.getElementById("showcase").style.color = "red";
+        document.getElementById("showcase").innerText = `Tu numero es ${num}`;
+      }
+    </script>
+  </body>
+</html>
