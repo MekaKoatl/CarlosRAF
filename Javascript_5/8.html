@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8</title>
+  </head>
+  <body>
+    <ul id="show"></ul>
+
+    <script>
+      let inicio = prompt("Introduce P (pares) o I (impares):").toUpperCase();
+
+      while (inicio !== "P" && inicio !== "I") {
+        inicio = prompt("Valor no correcto. Introduce P (pares) o I (impares):").toUpperCase();
+      }
+
+      let num = 1;
+      let list = "";
+
+      while (num <= 100) {
+        if (inicio === "P" && num % 2 === 0) {
+          list += `<li>${num}</li>`;
+        } else if (inicio === "I" && num % 2 !== 0) {
+          list += `<li>${num}</li>`;
+        }
+        num++;
+      }
+
+      document.getElementById("show").innerHTML = list;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6</title>
+  </head>
+  <body>
+    <script>
+      let valores = [];
+
+      for (let i = 0; i < 3; i++) {
+        valores[i] = parseFloat(prompt("Introduce el valor " + (i + 1) + ":"));
+      }
+
+      let menor = Math.min(valores[0], valores[1], valores[2]);
+
+      alert("Los valores introducidos son: " + valores + "\nEl más pequeño es: " + menor);
+    </script>
+  </body>
+</html>

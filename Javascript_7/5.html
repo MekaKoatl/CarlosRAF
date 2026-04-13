@@ -1,11 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5</title>
+  </head>
+  <body>
+    <script>
+      let letraNombre = {
+        a: "Aquaman",
+        b: "Batman",
+        c: "Capitán América",
+        d: "Deadpool",
+        e: "Elektra",
+        f: "Flash",
+        g: "Guardián",
+        h: "Hulk",
+        i: "Invencible",
+        j: "Jean Grey",
+        k: "Kick-Ass",
+        l: "Linterna Verde",
+        m: "Moon Knight",
+        n: "Nightwing",
+        o: "Omni-Man",
+        p: "Punisher",
+        q: "Quantum",
+        r: "Robin",
+        s: "Spiderman",
+        t: "Thor",
+        u: "Ultron",
+        v: "Venom",
+        w: "Wolverine",
+        x: "X-23",
+        y: "Yellow Jacket",
+        z: "Zatanna",
+      };
+
+      let letraApellido = {
+        a: "el Todopoderoso",
+        b: "el Invencible",
+        c: "el Celestial",
+        d: "el Oscuro",
+        e: "el Eterno",
+        f: "el Feroz",
+        g: "el Glorioso",
+        h: "el Heroico",
+        i: "el Imparable",
+        j: "el Justiciero",
+        k: "el Legendario",
+        l: "el Magnífico",
+        m: "el Misterioso",
+        n: "el Noble",
+        o: "el Omnipotente",
+        p: "el Poderoso",
+        q: "el Quantum",
+        r: "el Radiante",
+        s: "el Supremo",
+        t: "el Titánico",
+        u: "el Último",
+        v: "el Veloz",
+        w: "el Warlord",
+        x: "el Extremo",
+        y: "el Yield",
+        z: "el Zodiacal",
+      };
+
+      let fechaNacimiento = {
+        0: "de Krypton",
+        1: "de Asgard",
+        2: "de Wakanda",
+        3: "de Gotham",
+        4: "de Metrópolis",
+        5: "del Multiverso",
+        6: "de los X-Men",
+        7: "de S.H.I.E.L.D.",
+        8: "de los Vengadores",
+        9: "de la Liga de la Justicia",
+      };
+      let nombre = prompt(
+        "Introduce la primera letra de tu nombre:",
+      ).toLowerCase();
+      let apellido = prompt(
+        "Introduce la ultima letra de tu apellido:",
+      ).toLowerCase();
+      let fecha = prompt("Introduce tu año de nacimiento");
+      let genero = prompt(
+        "¿Quieres el nombre masculino o femenino? (M/F)",
+      ).toUpperCase();
+
+      let primeraLetraNombre = nombre[0];
+      let ultimaLetraApellido = apellido[apellido.length - 1];
+      let ultimoDigitoAño = fecha[fecha.length - 1];
+
+      let parte1 = letraNombre[primeraLetraNombre] || "Misterioso";
+      let parte2 = letraApellido[ultimaLetraApellido] || "Invencible";
+      let parte3 = fechaNacimiento[ultimoDigitoAño] || "del Universo";
+
+      if (genero === "F") {
+        parte1 = parte1.replace(/o$/, "a");
+        parte1 = parte1.replace(/el$/, "la");
+        parte2 = parte2.replace(/o$/, "a");
+        parte2 = parte2.replace(/el$/, "la");
+      }
+
+      alert(
+        "Tu nombre de superhéroe es:\n" + parte1 + " " + parte2 + " " + parte3,
+      );
+    </script>
+  </body>
 </html>

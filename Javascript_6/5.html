@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5</title>
+  </head>
+  <body>
+    <script>
+      let meses = [
+        "Enero", "Febrero", "Marzo", "Abril",
+        "Mayo", "Junio", "Julio", "Agosto",
+        "Septiembre", "Octubre", "Noviembre", "Diciembre"
+      ];
+
+      let num = parseInt(prompt("Introduce un número del 1 al 12:"));
+
+      if (num >= 1 && num <= 12) {
+        alert("El mes es: " + meses[num - 1]);
+      } else {
+        alert("Número no válido. Introduce un número del 1 al 12.");
+      }
+    </script>
+  </body>
+</html>
