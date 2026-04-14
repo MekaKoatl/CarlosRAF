@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 1.5rem;
+        border: 1px solid black;
+        margin: 0.2rem;
+      }
+
+      li, div{
+        display: flex;
+        align-items: center;
+        width: 20rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <span>Introduzca euros:</span>
+    <div>
+      <input type="number" id="user" />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/8/89/Bandera_de_Espa%C3%B1a.svg"
+        alt=""
+      />
+      <button onclick="convert()">convertir</button>
+    </div>
+    <ul id="result"></ul>
+
+    <script>
+      function convert() {
+        let user = parseFloat(document.getElementById("user").value);
+
+        let changes = [
+          {
+            change: 0.86,
+            name: "pounds",
+            symbol: "£",
+            image:
+              "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg",
+          },
+          {
+            change: 1.286,
+            name: "dollars",
+            symbol: "$",
+            image:
+              "data:image/png;base64,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",
+          },
+          {
+            change: 129.852,
+            name: "yens",
+            symbol: "¥",
+            image:
+              "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+          },
+          {
+            change: 166.38,
+            name: "pesetas",
+            symbol: "ptas",
+            image:
+              "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bandera_de_la_II_Rep%C3%BAblica_Espa%C3%B1ola.PNG",
+          },
+        ];
+
+        for (let i = 0; i < changes.length; i++) {
+          document.getElementById("result").innerHTML +=
+            `<li>${changes[i].change * user} ${changes[i].symbol}-${changes[i].name}<img src="${changes[i].image}"></li>`;
+        }
+      }
+    </script>
+  </body>
+</html>

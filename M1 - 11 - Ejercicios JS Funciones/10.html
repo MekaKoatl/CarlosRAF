@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>10</title>
+  </head>
+  <body>
+    <label>¿De qué figura estas calculando el area?</label><br /><br />
+    <select id="figuras">
+      <option value="cuadrado">Cuadrado</option>
+      <option value="circulo">Circulo</option>
+      <option value="triangulo">Triangulo</option>
+    </select>
+    <div></div>
+
+    <br /><br />
+
+    <button onclick="elegir()">Ingresar figura</button>
+
+    <!-- <label>Número A: <input type="number" id="numA" /></label><br /><br />
+    <label>Número B: <input type="number" id="numB" /></label><br /><br /> -->
+
+    <br /><br />
+
+    <div id="datos"></div>
+
+    <br /><br />
+
+    <div id="resultado"></div>
+
+    <script>
+      
+      function elegir() {
+        let dato;
+        let figura = document.getElementById("figuras").value;
+        let calculo = [{
+          
+
+        }]
+
+        if (figura == "cuadrado") {
+          document.getElementById("datos").innerHTML +=
+            `<label>Ingresa el tamaño de uno de los lados del cuadrado<br><br><input type="number" id="numA" /></label><br /><br /> <br /> <button onclick="operacion()">Ingresar figura</button>
+`;
+        }
+      }
+
+      // function calcular() {
+      //   let a = parseFloat(document.getElementById("numA").value);
+      //   let b = parseFloat(document.getElementById("numB").value);
+      //   let calc = document.getElementById("operacion").value;
+
+      //   let simbolo, resultado, estilo;
+
+      //   if (calc === "suma") {
+      //     simbolo = "+";
+      //     resultado = a + b;
+      //   } else if (calc === "resta") {
+      //     simbolo = "-";
+      //     resultado = a - b;
+      //   } else if (calc === "multiplicacion") {
+      //     simbolo = "×";
+      //     resultado = a * b;
+      //   } else if (calc === "division") {
+      //     simbolo = "÷";
+      //     resultado = a / b;
+      //   } else if (calc === "resto") {
+      //     simbolo = "%";
+      //     resultado = a % b;
+      //   }
+
+      //   document.getElementById("resultado").innerHTML = `
+      //        <p>
+      //          ${a} ${simbolo} ${b} = ${resultado}
+      //        </p>
+      //      `;
+      // }
+    </script>
+  </body>
+</html>
