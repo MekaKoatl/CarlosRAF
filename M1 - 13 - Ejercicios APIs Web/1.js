@@ -22,6 +22,6 @@ function showData(characters) {
       <p class="text-gray-500">${characters[i].status} - ${characters[i].species}</p>
     `;
 
-    container.appendChild(card); 
+    container.appendChild(card);  
   }
 }
