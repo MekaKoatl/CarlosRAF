@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="loadJoke()" id="bt-joke">cargar proxima broma</button>
+    <div id="joke">
+      <p id="text"></p>
+      <div id="img"></div>
+      <a target="blank" href="https://www.google.com/?hl=es">google</a>
+    </div>
+    <p id="loading"></p>
+    <script>
+      loadJoke()
+      function loadJoke() {
+        getHtml("loading", "Cargando");
+        fetch("https://api.chucknorris.io/jokes/random")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            setTimeout(() => {
+              getHtml("text", data.value);
+              getHtml("img", `<img src= "${data.icon_url}">`);
+
+              getHtml("loading", "");
+            }, 2000);
+          });
+      }
+
+      function getHtml(id, content) {
+        document.getElementById(id).innerHTML = content;
+      }
+    </script>
+  </body>
+</html>
