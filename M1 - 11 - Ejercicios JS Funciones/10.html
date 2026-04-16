@@ -5,76 +5,77 @@
     <title>10</title>
   </head>
   <body>
-    <label>¿De qué figura estas calculando el area?</label><br /><br />
+    <label>¿De qué figura estás calculando el área?</label><br /><br />
     <select id="figuras">
       <option value="cuadrado">Cuadrado</option>
-      <option value="circulo">Circulo</option>
-      <option value="triangulo">Triangulo</option>
+      <option value="circulo">Círculo</option>
+      <option value="triangulo">Triángulo</option>
     </select>
-    <div></div>
-
     <br /><br />
-
     <button onclick="elegir()">Ingresar figura</button>
-
-    <!-- <label>Número A: <input type="number" id="numA" /></label><br /><br />
-    <label>Número B: <input type="number" id="numB" /></label><br /><br /> -->
-
     <br /><br />
-
     <div id="datos"></div>
-
     <br /><br />
-
     <div id="resultado"></div>
 
     <script>
-      
+      // // El calculo actual
+      function areaCirculo(radio) {
+        return Math.round(Math.pow(radio, 2) * Math.PI);
+      }
+
+      function areaCuadrado(lado) {
+        return Math.round(lado * lado);
+      }
+
+      function areaTriangulo(base, altura) {
+        return Math.round((base * altura) / 2);
+      }
+
+      // // // Elegir la figura
       function elegir() {
-        let dato;
         let figura = document.getElementById("figuras").value;
-        let calculo = [{
-          
 
-        }]
+        if (figura === "cuadrado") {
+          document.getElementById("datos").innerHTML = `
+            <label>Lado: <input type="number" id="numA" /></label><br /><br />
+            <button onclick="calcular('cuadrado')">Calcular área</button>`;
 
-        if (figura == "cuadrado") {
-          document.getElementById("datos").innerHTML +=
-            `<label>Ingresa el tamaño de uno de los lados del cuadrado<br><br><input type="number" id="numA" /></label><br /><br /> <br /> <button onclick="operacion()">Ingresar figura</button>
-`;
+        } else if (figura === "circulo") {
+          document.getElementById("datos").innerHTML = `
+            <label>Radio: <input type="number" id="numA" /></label><br /><br />
+            <button onclick="calcular('circulo')">Calcular área</button>`;
+
+        } else if (figura === "triangulo") {
+          document.getElementById("datos").innerHTML = `
+            <label>Base: <input type="number" id="numA" /></label><br /><br />
+            <label>Altura: <input type="number" id="numB" /></label><br /><br />
+            <button onclick="calcular('triangulo')">Calcular área</button>`;
         }
       }
 
-      // function calcular() {
-      //   let a = parseFloat(document.getElementById("numA").value);
-      //   let b = parseFloat(document.getElementById("numB").value);
-      //   let calc = document.getElementById("operacion").value;
+// // //  Mostrar resultado
+      function calcular(figura) {
+        let a = parseFloat(document.getElementById("numA").value);
+        let resultado;
 
-      //   let simbolo, resultado, estilo;
+        if (figura === "cuadrado") {
+          resultado = areaCuadrado(a);
+          document.getElementById("resultado").innerHTML =
+            `<p>Área del cuadrado (lado ${a}): <strong>${resultado}</strong></p>`;
 
-      //   if (calc === "suma") {
-      //     simbolo = "+";
-      //     resultado = a + b;
-      //   } else if (calc === "resta") {
-      //     simbolo = "-";
-      //     resultado = a - b;
-      //   } else if (calc === "multiplicacion") {
-      //     simbolo = "×";
-      //     resultado = a * b;
-      //   } else if (calc === "division") {
-      //     simbolo = "÷";
-      //     resultado = a / b;
-      //   } else if (calc === "resto") {
-      //     simbolo = "%";
-      //     resultado = a % b;
-      //   }
+        } else if (figura === "circulo") {
+          resultado = areaCirculo(a);
+          document.getElementById("resultado").innerHTML =
+            `<p>Área del círculo (radio ${a}): <strong>${resultado}</strong></p>`;
 
-      //   document.getElementById("resultado").innerHTML = `
-      //        <p>
-      //          ${a} ${simbolo} ${b} = ${resultado}
-      //        </p>
-      //      `;
-      // }
+        } else if (figura === "triangulo") {
+          let b = parseFloat(document.getElementById("numB").value);
+          resultado = areaTriangulo(a, b);
+          document.getElementById("resultado").innerHTML =
+            `<p>Área del triángulo (base ${a}, altura ${b}): <strong>${resultado}</strong></p>`;
+        }
+      }
     </script>
   </body>
 </html>

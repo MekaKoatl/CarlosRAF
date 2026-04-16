@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6</title>
+  </head>
+  <body>
+    <script>
+      general();
+
+      function general() {
+        do {
+          let num1 = parseInt(prompt("Introduce un numero"));
+          num2 = parseInt(prompt("Introduce otro numero (0 para que muera el programa):"));
+
+          if (num2 !== 0) {
+            operacion(num1, num2);
+          }
+        } while (num2 !== 0);
+      }
+
+      function operacion(num1, num2) {
+        let divi = num1 % num2;
+        alert(`El resto de ${num1} % ${num2} es: ${divi}`);
+      }
+    </script>
+  </body>
+</html>
