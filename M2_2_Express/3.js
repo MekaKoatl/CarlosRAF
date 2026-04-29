@@ -1,18 +1,15 @@
 const express = require("express");
 const app = express();
 
-let personas = []
+const personas = ["Cris", "Carlos", "Luca", "Salma", "Kamilo", "Karla"];
 
-app.get("/random/:max", (req, res) => {
-  const max = parseInt(req.params.max);
+app.get("/persona", (req, res) => {
+  res.send(personas);
+});
 
-
-  const randomNumber = Math.floor(Math.random() * max) + 1;
-
-  res.json({
-    max,
-    random: randomNumber,
-  });
+app.get("/persona/:id", (req, res) => {
+  const persona = personas[req.params.id];
+  res.send(persona ?? "Persona no encontrada");
 });
 
 // Iniciar servidor

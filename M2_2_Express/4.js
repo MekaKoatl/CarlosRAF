@@ -1,7 +1,11 @@
 const express = require("express");
-let data = require("./archivo");
-const app = express;
+const { saludarEnExpress } = require("./archivo_4.js");
 
-app.get("/fuu", (req, res) => {
-    res.send(greetings())
+const app = express();
+
+app.get("/saludo", (req, res) => {
+  res.send(saludarEnExpress());
 });
+
+// Iniciar servidor
+app.listen(3000);
