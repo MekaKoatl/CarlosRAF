@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+let personas = []
+
 app.get("/random/:max", (req, res) => {
   const max = parseInt(req.params.max);
 
